@@ -12,7 +12,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
         msg = 'Python is running on Qoddi! You requested %s' % self.path
         # self.wfile.write(msg.encode())
+        print('일단 여기')
         main.root()
+        print('여기 됨?')
 
 
 port = int(os.getenv('PORT', 8080))
