@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-gm8$da%5eg9j6ocqm2gft7^p&@(f^_tdf4&s0p1_4&r1lih)bi'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-gm8$da%5eg9j6ocqm2gft7^p&@(f^_tdf4&s0p1_4&r1lih)bi')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', False))
 
 ALLOWED_HOSTS = ['*']
 
@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleWare'
 ]
 
 ROOT_URLCONF = 'HomeBus.urls'
