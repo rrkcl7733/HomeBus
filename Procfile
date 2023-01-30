@@ -1,1 +1,1 @@
-web: gunicorn HomeBus.wsgi
+web: gunicorn HomeBus.wsgi --log-file -
