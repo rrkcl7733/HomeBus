@@ -1,1 +1,1 @@
-web: gunicorn HomeBus.wsgi 
+web: waitress-serve --listen=*:8000 HomeBus.wsgi:application
