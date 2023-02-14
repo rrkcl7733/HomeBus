@@ -1,6 +1,33 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h1>오늘 저녁은 아무거나!</h1>
-    <img src="{% static 'images/H50-3.png' %}" alt='H50-3'>
+<script src="{% static 'src/app.js'%}">
+</script>
+    <table class="table table-bordered fs-1">
+  <thead>
+    <tr>
+      <th scope="col">버스</th>
+      <th scope="col">도착시간</th>
+      <th scope="col">남은시간</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr>
+        <td>H50-3</td>
+        <td id="H50-3"></td>
+        <td id ="H50-3_time"></td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>Larry the Bird</td>
+      <td>@twitter</td>
+        <td>fuck</td>
+    </tr>
+  </tbody>
+</table>
+    <img src="{% static 'images/A_H50-3.png' %}" alt='H50-3'>
 {% endblock %}
