@@ -145,19 +145,19 @@ PWA_APP_START_URL = '/'
 PWA_APP_STATUS_BAR_COLOR = 'default'
 PWA_APP_ICONS = [
     {
-        'src': 'images/jelly.jpg',
+        'src': BASE_DIR / 'staticfiles/images/jelly.jpg',
         'sizes': '160x160'
     }
 ]
 PWA_APP_ICONS_APPLE = [
     {
-        'src': 'images/jelly.jpg',
+        'src': BASE_DIR / 'staticfiles/images/jelly.jpg',
         'sizes': '160x160'
     }
 ]
 PWA_APP_SPLASH_SCREEN = [
     {
-        'src': 'images/back.jpg',
+        'src': BASE_DIR / 'staticfiles/images/back.jpg',
         'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
     }
 ]
