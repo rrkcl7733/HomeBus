@@ -155,10 +155,12 @@ PWA_APP_ICONS_APPLE = [
         'sizes': '160x160'
     }
 ]
-PWA_APP_SPLASH_SCREEN = [
-    {
-        'src': '/static/images/back.jpg',
-        'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
-    }
-]
+PWA_APP_SPLASH_SCREEN = {
+    'name' : '남양버스',
+    'icons': [
+        {
+            'src': '/static/images/back.jpg',
+        }
+    ]
+}
 PWA_APP_LANG = 'ko-kr'
