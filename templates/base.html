@@ -1,4 +1,5 @@
 {% load pwa %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -12,7 +13,7 @@
 <nav class="navbar bg-light py-5">
   <div class="container-fluid">
     <a class="navbar-brand fs-1 text-center">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsIh3qtezLWKbUmjdiRiPrXeLHpLSwH9n5IAYZC5K9I6Jn9EJO0d6GPK4duRPQN-LJ9Fg&usqp=CAU" alt="Logo" width=50% height=50% class="d-inline-block img-rounded text-center">
+      <img src="{% static 'images/fox.png'%}" alt="Logo" width=50% height=50% class="d-inline-block img-rounded text-center">
       뿡뿡
     </a>
   </div>

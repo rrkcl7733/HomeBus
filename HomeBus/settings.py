@@ -145,17 +145,17 @@ PWA_APP_START_URL = '/'
 PWA_APP_STATUS_BAR_COLOR = 'default'
 PWA_APP_ICONS = [
     {
-        'src': '/static/images/jelly.jpg',
+        'src': '/static/images/jelly.png',
         'sizes': '160x160'
     }
 ]
 PWA_APP_ICONS_APPLE = [
     {
-        'src': '/static/images/jelly.jpg',
+        'src': '/static/images/jelly.png',
         'sizes': '160x160'
     }
 ]
-PWA_APP_SPLASH_SCREEN = {
+PWA_APP_SPLASH_SCREEN = [
     {
         'src': '/static/images/back.jpg',
         'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)',
@@ -210,5 +210,5 @@ PWA_APP_SPLASH_SCREEN = {
         'sizes': '1024x1366',
         'orientation': 'portrait'
     },
-}
+]
 PWA_APP_LANG = 'ko-kr'
