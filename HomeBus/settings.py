@@ -156,11 +156,59 @@ PWA_APP_ICONS_APPLE = [
     }
 ]
 PWA_APP_SPLASH_SCREEN = {
-    'name' : '남양버스',
-    'icons': [
-        {
-            'src': '/static/images/back.jpg',
-        }
-    ]
+    {
+        'src': '/static/images/back.jpg',
+        'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)',
+        'sizes': '320x568',
+        'orientation': 'portrait'
+    },
+    {
+        'src': '/static/images/back.jpg',
+        'media': '(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)',
+        'sizes': '375x667',
+        'orientation': 'portrait'
+    },
+    {
+        'src': '/static/images/back.jpg',
+        'media': '(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)',
+        'sizes': '414x736',
+        'orientation': 'portrait'
+    },
+    {
+        'src': '/static/images/back.jpg',
+        'media': '(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)',
+        'sizes': '375x812',
+        'orientation': 'portrait'
+    },
+    {
+        'src': '/static/images/back.jpg',
+        'media': '(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)',
+        'sizes': '414x896',
+        'orientation': 'portrait'
+    },
+    {
+        'src': '/static/images/back.jpg',
+        'media': '(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)',
+        'sizes': '768x1024',
+        'orientation': 'portrait'
+    },
+    {
+        'src': '/static/images/back.jpg',
+        'media': '(device-width: 834px) and (device-height: 1112px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)',
+        'sizes': '834x1112',
+        'orientation': 'portrait'
+    },
+    {
+        'src': '/static/images/back.jpg',
+        'media': '(device-width: 834px) and (device-height: 1194px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)',
+        'sizes': '834x1194',
+        'orientation': 'portrait'
+    },
+    {
+        'src': '/static/images/back.jpg',
+        'media': '(device-width: 1024px) and (device-height: 1366px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)',
+        'sizes': '1024x1366',
+        'orientation': 'portrait'
+    },
 }
 PWA_APP_LANG = 'ko-kr'
