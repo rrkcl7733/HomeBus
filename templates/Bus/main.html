@@ -1,14 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<style>
-@media (max-width: 767px) {
-  .modal-img {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
 <script src="{% static 'src/app.js'%}">
 </script>
     <h1 class="text-center my-5 fw-bolder">{{ intro }}</h1>
@@ -59,7 +51,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body d-flex justify-content-center align-items-center">
-                <img src="{% static 'images/A_H50-3.png' %}" alt='H50-3' class="modal-img">
+                <img src="{% static 'images/A_H50-3.png' %}" alt='H50-3' class="img-fluid">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">닫기</button>
@@ -76,7 +68,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <img src="{% static 'images/B_H50-4B.jpg' %}" alt='H50-4B' class="modal-img">
+                <img src="{% static 'images/B_H50-4B.jpg' %}" alt='H50-4B' class="img-fluid">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">닫기</button>
@@ -93,7 +85,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <img src="{% static 'images/C_H106.jpg' %}" alt='H106' class="modal-img">
+                <img src="{% static 'images/C_H106.jpg' %}" alt='H106' class="img-fluid">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">닫기</button>
@@ -110,20 +102,30 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <img src="{% static 'images/D_50-8.jpg' %}" alt='50-8' class="modal-img">
+                <img src="{% static 'images/D_50-8.jpg' %}" alt='50-8' class="img-fluid">
               </div>
               <div class="modal-footer d-block" style="max-width: 100%;">
                   <div class="d-flex justify-content-between">
                     <div class="d-inline-block">
-                        <a href="navermaps://route/bus?routeFilter=16141" class="btn btn-primary btn-lg">네이버 지도로 보기</a>
+                        <a href="#" class="btn btn-primary btn-lg" id="naver-map">네이버 지도로 보기</a>
                     </div>
                       <div class="d-inline-block text-right">
                           <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">닫기</button>
-                          <a href="https://map.naver.com/v5/bus/bus-route/-/bus-route/16141?c=12,0,0,0,dh" class="btn btn-success btn-lg" target="_blank" rel="noopener noreferrer">노선 확인하기</a>
+                          <a href="https://map.naver.com/v5/bus/bus-route/-/bus-route/16141?c=12,0,0,0,dh" class="btn btn-success btn-lg" rel="noopener noreferrer">노선 확인하기</a>
                       </div>
                   </div>
               </div>
             </div>
         </div>
     </div>
+    <script>
+    $(document).ready(function() {
+      if (/Mobi/.test(navigator.userAgent)) {
+        $('#naver-map').on('click', function(e) {
+          e.preventDefault();
+          window.location.href = 'navermaps://route/bus?routeFilter=16141';
+        });
+      }
+    });
+</script>
 {% endblock %}
