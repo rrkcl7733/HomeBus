@@ -1,17 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<script src="{% static 'src/app.js'%}">
-$(document).ready(function() {
-  // 모바일 기기에서만 해당 링크를 열도록 처리
-  if (/Mobi/.test(navigator.userAgent)) {
-    $('#naver-map').on('click', function(e) {
-      e.preventDefault();
-      window.location.href = 'navermaps://route/bus?routeFilter=16141';
-    });
-  }
-});
-</script>
+<script src="{% static 'src/app.js'%}"></script>
     <h1 class="text-center my-5 fw-bolder">{{ intro }}</h1>
     <div class="my-5 mx-5 px-5">
     <table class="table table-bordered table-dark fs-1 text-center">
@@ -116,11 +106,11 @@ $(document).ready(function() {
               <div class="modal-footer d-block" style="max-width: 100%;">
                   <div class="d-flex justify-content-between">
                     <div class="d-inline-block">
-                        <a href="#" class="btn btn-primary btn-lg" id="naver-map">네이버 지도로 보기</a>
+                        <a href="navermaps://route/bus?routeFilter=16141" class="btn btn-primary btn-lg">네이버 지도로 보기</a>
                     </div>
                       <div class="d-inline-block text-right">
                           <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">닫기</button>
-                          <a href="https://map.naver.com/v5/bus/bus-route/-/bus-route/16141?c=12,0,0,0,dh" class="btn btn-success btn-lg" rel="noopener noreferrer alternate">노선 확인하기</a>
+                          <a href="https://map.naver.com/v5/bus/bus-route/-/bus-route/16141?c=12,0,0,0,dh" class="btn btn-success btn-lg" target="_top" rel="noopener noreferrer alternate">노선 확인하기</a>
                       </div>
                   </div>
               </div>
