@@ -46,3 +46,22 @@ function updateTime() {
 }
 
 setInterval(updateTime, 1000);
+// 현재 방향 감지
+var currentOrientation = window.orientation;
+
+// 방향 변경 시 이벤트 핸들러 등록
+window.addEventListener("orientationchange", function() {
+  // 현재 방향 감지
+  var newOrientation = window.orientation;
+  if (newOrientation !== currentOrientation) {
+    // 가로모드인 경우 body에 클래스 추가
+    if (newOrientation === 90 || newOrientation === -90) {
+      document.body.classList.add("landscape");
+    } else {
+      // 세로모드인 경우 body에서 클래스 제거
+      document.body.classList.remove("landscape");
+    }
+    // 방향 변경 후 현재 방향 갱신
+    currentOrientation = newOrientation;
+  }
+});

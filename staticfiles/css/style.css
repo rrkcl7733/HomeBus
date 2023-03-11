@@ -1,5 +1,10 @@
-@media (orientation: landscape) {
-  body {
-    transform: rotate(90deg);
-  }
-}
+/*body {*/
+/*  !* 가로모드에서 스크롤을 막음 *!*/
+/*  overflow: hidden;*/
+/*  !* 가로모드에서 화면을 고정시킴 *!*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  bottom: 0;*/
+/*}*/
